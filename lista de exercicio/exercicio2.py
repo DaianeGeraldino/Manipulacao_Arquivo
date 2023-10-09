@@ -9,9 +9,11 @@ with open(arquivo_estudantes, 'r') as arquivo:
         if linha.startswith('nome: '):
             nome = linha[len('nome: '):]
             estudante_atual = {'nome': nome}
+
         elif linha.startswith('idade: '):
             idade = int(linha[len('idade: '):])
             estudante_atual['idade'] = idade
+            
         elif linha.startswith('curso: '):
             curso = linha[len('curso: '):]
             estudante_atual['curso'] = curso

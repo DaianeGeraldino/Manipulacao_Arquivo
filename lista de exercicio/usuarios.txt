@@ -1,6 +1,6 @@
 nome: daiane
 idade: 18
-curso: info
-nome: vini
-idade: 17
-curso: info
+curso: meca
+nome: juju
+idade: 20
+curso: meca

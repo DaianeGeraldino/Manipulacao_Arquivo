@@ -6,32 +6,30 @@ dados_usuarios = {
 
 usuarios = []
 
-while True:
-    # Cria um novo dicionário para cada usuário
-    usuario = {}
 
-    nome = input('Insira seu nome: ')
-    usuario['nome'] = nome
+# Cria um novo dicionário para cada usuário
+usuario = {}
 
-    idade = int(input('Insira sua idade: '))
-    usuario['idade'] = idade
+nome = input('Insira seu nome: ')
+usuario['nome'] = nome
 
-    curso = input('Insira seu curso: ')
-    usuario['curso'] = curso
+idade = int(input('Insira sua idade: '))
+usuario['idade'] = idade
 
-    # Adiciona o dicionário do usuário à lista de usuários
-    usuarios.append(usuario)
+curso = input('Insira seu curso: ')
+usuario['curso'] = curso
 
-    confirm = input('Deseja continuar? [Y/N]').lower()
-    if confirm != 'y':
-        break
+# Adiciona o dicionário do usuário à lista de usuários
+usuarios.append(usuario)
+
 
 print(usuarios)
 
 arquivo_usuario = 'usuarios.txt'
 
-with open(arquivo_usuario, 'w') as arquivo:
+with open(arquivo_usuario, 'a') as arquivo:
     for usuario in usuarios:
         for chave, valor in usuario.items():
             linha = f'{chave}: {valor}\n'
             arquivo.write(linha)
+        arquivo.write('\n')
